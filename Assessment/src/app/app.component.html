@@ -3,5 +3,14 @@
     <a routerLink = "/dashboard">Dashboard</a>
     <a routerLink = "/heroes">Heroes</a>
 </nav>
+<h4>My first attribute directory</h4>
+<h4>Pick a highloight color</h4>
+<div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p [appRedblack]="color">Highlighted in yellow</p>
+<p [appRedblack]="color" defaultColor="violet">Highlight me too</p>
 <router-outlet></router-outlet>
 <app-messages></app-messages>
